@@ -23,6 +23,7 @@ Describe: wordCounter()
 
 ## Tests
 
+### Describe: wordCounter ()
 Test: "It should return 1 if a passage has just one word."
 Code:
 const text = "hello";
@@ -115,6 +116,15 @@ const word = "hello";
 const text = "hello there";
 boldPassage(word, text);
 Expected Output: "<p>hello <b>there</b></p>"
+
+### Describe: mostCommonWords()
+Test: "It should return the three most used words in a passage of text"
+Code:
+const word = "";
+const text = "Hi there hey yo hi hi yay yo whoa there whoa... yay!";
+mostCommonWords(word, text);
+Expected Output: hi: 3, whoa: 2, yay; 2
+
 
 ## Setup/Installation Requirements
 _you can view this webpage by checking out the url:_

@@ -14,8 +14,8 @@ function wordCounter(text) {
   const wordArray = text.split(" ");
   wordArray.forEach(function(element) 
   {
-  if (!Number(element)) {
-    wordCount++;
+    if (!Number(element)) {
+      wordCount++;
     }
   });
   return wordCount;
@@ -35,6 +35,24 @@ function numberOfOccurrencesInText(word, text) {
   });
   return wordCount;
 }
+
+//test function for finding most common word
+function mostCommonWords (word, text) {
+  const inputWord = (word, text);
+  if (noInputtedWord(word,text)) {
+    return 0;
+  }
+  const wordArray = text.split(" ");
+  let wordCount = 0;
+  wordArray.forEach(function(element)
+  {
+    if (element.toLowerCase().includes(word.toLowerCase())) {
+      wordCount++
+    }
+  });
+  return inputWord + wordCount;
+}
+//test function for finding most common word
 
 // UI Logic
 
@@ -61,8 +79,10 @@ $(document).ready(function(){
     const word = $("#word").val();
     const wordCount = wordCounter(passage);
     const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
+    const mostCommonWords = numberOfOccurrencesInText (word, passage);
     $("#total-count").html(wordCount);
     $("#selected-count").html(occurrencesOfWord);
     $("#bolded-passage").html(boldPassage(word, passage));
+    $("#common-words").html(mostCommonWords);
   });
 });
