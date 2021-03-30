@@ -35,6 +35,14 @@ const text = "hello there";
 wordCounter(text);
 Expected Output: 2
 
+Test: "It should return 0 for a string that is only spaces."
+Code: wordCounter("            ");
+Expected Output: 0
+
+Test: "It should not count numbers as words."
+Code: wordCounter("hi there 77 19");
+Expected Output: 2
+
 ## Setup/Installation Requirements
 _you can view this webpage by checking out the url:_
 <!-- https://github.com/Knutsenjamie/Friday-Project-2  change to correct repository later -->
